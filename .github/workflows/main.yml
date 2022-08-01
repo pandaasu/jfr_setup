@@ -35,11 +35,7 @@ jobs:
           echo "==========downloaded the war file=========="
           dir
           
-          .\jenkinsfile-runner-1.0-beta-30\bin\jenkinsfile-runner.bat \
-          -w D:\GH-Runner1\_work\bai_test_jfr_compatibility\bai_test_jfr_compatibility\jenkins.war \
-          -p D:\GH-Runner1\_work\JFR-test\JFR-test\plugins.txt \
-          -f D:\GH-Runner1\_work\bai_test_jfr_compatibility\bai_test_jfr_compatibility\jenkinsfile \
-          --mirror http://ftp.halifax.rwth-aachen.de/jenkins -ns
+          .\jenkinsfile-runner-1.0-beta-30\bin\jenkinsfile-runner.bat -w D:\GH-Runner1\_work\bai_test_jfr_compatibility\bai_test_jfr_compatibility\jenkins.war -p D:\GH-Runner1\_work\JFR-test\JFR-test\plugins.txt -f D:\GH-Runner1\_work\bai_test_jfr_compatibility\bai_test_jfr_compatibility\jenkinsfile --mirror http://ftp.halifax.rwth-aachen.de/jenkins -ns
 
           
 #          cp /home/runner/work/Test2/Test2/"${{ github.event.inputs.RepoName }}"/properties.jenkins /home/runner/work/Test2/Test2
