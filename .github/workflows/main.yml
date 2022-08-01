@@ -11,18 +11,18 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run a one-line script
         run: |
-          echo Hello, world!
+          echo "==========Hello, world!=========="
           dir
           $PSVersionTable.PSVersion
-          echo Powershell version check done
+          echo "==========Powershell version check done=========="
           [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-          echo TLS certificate check done
+          echo "==========TLS certificate check done=========="
           dir
           Invoke-WebRequest -UseBasicParsing https://github.com/jenkinsci/jenkinsfile-runner/releases/download/1.0-beta-30/jenkinsfile-runner-1.0-beta-30.zip -OutFile D:\GH-Runner1\_work\JFR-test\JFR-test\jenkinsfile-runner-1.0-beta-30.zip
-          echo Downloaded jenkinsfile-runner zip file
+          echo "==========Downloaded jenkinsfile-runner zip file=========="
           dir
           Expand-Archive .\jenkinsfile-runner-1.0-beta-30.zip
-          echo unzipping the file
+          echo "==========unzipping the file=========="
           dir
           chmod u+x .\bin\jenkinsfile-runner
           echo changing the user permission for the binary file
