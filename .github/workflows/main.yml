@@ -5,7 +5,8 @@ on:
 
 jobs:
   build:
-    runs-on: [self-hosted, Windows, x64, Runner1-AZR-EUS2W6375]
+#     runs-on: [self-hosted, Windows, x64, Runner1-AZR-EUS2W6375]
+    runs-on: [self-hosted, Linux, x64, Runner1]
     steps:
       - uses: actions/checkout@v2
       - name: Run a one-line script
@@ -13,15 +14,21 @@ jobs:
           echo Hello, world!
           dir
           $PSVersionTable.PSVersion
+          echo Powershell version check done
           [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+          echo TLS certificate check done
           dir
           Invoke-WebRequest -UseBasicParsing https://github.com/jenkinsci/jenkinsfile-runner/releases/download/1.0-beta-30/jenkinsfile-runner-1.0-beta-30.zip -OutFile D:\GH-Runner1\_work\JFR-test\JFR-test\jenkinsfile-runner-1.0-beta-30.zip
+          echo Downloaded jenkinsfile-runner zip file
           dir
           Expand-Archive .\jenkinsfile-runner-1.0-beta-30.zip
+          echo unzipping the file
           dir
-          #chmod u+x .\bin\jenkinsfile-runner
+          chmod u+x .\bin\jenkinsfile-runner
+          echo changing the user permission for the binary file
           dir
           Invoke-WebRequest -UseBasicParsing https://get.jenkins.io/war/2.342/jenkins.war
+          echo downloading the jenkins war file
           #cp /home/runner/work/Test2/Test2/"${{ github.event.inputs.RepoName }}"/properties.jenkins /home/runner/work/Test2/Test2
           .\bin\jenkinsfile-runner -w D:\GH-Runner1\_work\JFR-test\JFR-test\jenkins.war -p D:\GH-Runner1\_work\JFR-test\JFR-test\plugins.txt -f D:\GH-Runner1\_work\JFR-test\JFR-test\jenkinsfile --mirror http://ftp.halifax.rwth-aachen.de/jenkins -ns
           #./bin/jenkinsfile-runner -w /application/actions-runner/Runner1/_work/JFR-test/JFR-test/jenkins.war -p /application/actions-runner/Runner1/_work/JFR-test/JFR-test/plugins.txt -f /application/actions-runner/Runner1/_work/JFR-test/JFR-test/jenkinsfile --mirror https://ftp.halifax.rwth-aachen.de/jenkins -ns
