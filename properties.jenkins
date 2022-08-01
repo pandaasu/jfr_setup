@@ -1,0 +1,6 @@
+RepoName = Mars-Incorporated/Mulesoft_apirefactorpoc
+BranchName = feature/host-update
+repo.name = JFR-test
+REPOSITORY_NAME = Mars-Incorporated/Mulesoft_apirefactorpoc
+BRANCH_TYPE = feature
+BRANCH_NAME = apirefactorpoc
