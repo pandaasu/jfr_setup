@@ -18,8 +18,11 @@ jobs:
           [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
           echo "==========TLS certificate check done=========="
           dir
-          echo "==========Downloading the zip file=========="
-          Invoke-WebRequest -UseBasicParsing https://github.com/jenkinsci/jenkinsfile-runner/releases/download/1.0-beta-30/jenkinsfile-runner-1.0-beta-30.zip
+          echo "==========seeting up the download URL=========="
+          $env:JFR_Download_URL = 'https://github.com/jenkinsci/jenkinsfile-runner/releases/download/1.0-beta-30/jenkinsfile-runner-1.0-beta-30.zip'
+          echo echo "==========Downloading the zip file=========="
+          curl -L -o jenkinsfile-runner-1.0-beta-30.zip $env:JFR_Download_URL 
+          echo echo "==========Downloading the zip file=========="
           dir
           Expand-Archive .\jenkinsfile-runner-1.0-beta-30.zip
           echo "==========unzipping the file=========="
