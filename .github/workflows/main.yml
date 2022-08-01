@@ -18,14 +18,23 @@ jobs:
           [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
           echo "==========TLS certificate check done=========="
           dir
+          
+          echo "==========seting up the download url of JFR=========="
+          $env:JFR_Download_URL = 'https://github.com/jenkinsci/jenkinsfile-runner/releases/download/1.0-beta-30/jenkinsfile-runner-1.0-beta-30.zip'
+          echo "==========Downloading the JFR zip=========="
+          curl -o jenkinsfile-runner-1.0-beta-30.zip $env:JFR_Download_URL 
+          echo "==========unzipping the zip file=========="
           Expand-Archive .\jenkinsfile-runner-1.0-beta-30.zip
           echo "==========Unzipped the file=========="
           dir
+          
           echo "==========setting up the jenkins url=========="
           $env:Jenkins_Download_URL = 'https://get.jenkins.io/war/2.342/jenkins.war'
           echo "==========Downloading the WAR file=========="
           curl -o $env:Jenkins_Download_URL 
           echo "==========downloaded the war file=========="
+          dir
+          
           #cp /home/runner/work/Test2/Test2/"${{ github.event.inputs.RepoName }}"/properties.jenkins /home/runner/work/Test2/Test2
           .\bin\jenkinsfile-runner -w D:\GH-Runner1\_work\JFR-test\JFR-test\jenkins.war -p D:\GH-Runner1\_work\JFR-test\JFR-test\plugins.txt -f D:\GH-Runner1\_work\JFR-test\JFR-test\jenkinsfile --mirror http://ftp.halifax.rwth-aachen.de/jenkins -ns
           #./bin/jenkinsfile-runner -w /application/actions-runner/Runner1/_work/JFR-test/JFR-test/jenkins.war -p /application/actions-runner/Runner1/_work/JFR-test/JFR-test/plugins.txt -f /application/actions-runner/Runner1/_work/JFR-test/JFR-test/jenkinsfile --mirror https://ftp.halifax.rwth-aachen.de/jenkins -ns
