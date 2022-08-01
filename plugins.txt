@@ -49,6 +49,7 @@ gravatar:latest
 groovy:latest
 handlebars:latest
 icon-shim:latest
+instance-identity:latest
 jackson2-api:latest
 javadoc:latest
 javax-activation-api:latest
@@ -71,6 +72,7 @@ matrix-project:latest
 maven-plugin:latest
 mercurial:latest
 metrics:latest
+mina-sshd-api-core:latest
 momentjs:latest
 oauth-credentials:latest
 oic-auth:latest
