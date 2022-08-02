@@ -72,6 +72,7 @@ matrix-project:latest
 maven-plugin:latest
 mercurial:latest
 metrics:latest
+mina-sshd-api-common:latest
 mina-sshd-api-core:latest
 momentjs:latest
 oauth-credentials:latest
