@@ -30,7 +30,7 @@ jobs:
           
 
           
-          .\jenkinsfile-runner-1.0-beta-30\bin\jenkinsfile-runner.bat -jv 2.346.1 -p D:\GH-Runner1\_work\bai_test_jfr_compatibility\bai_test_jfr_compatibility\plugins.txt -f D:\GH-Runner1\_work\bai_test_jfr_compatibility\bai_test_jfr_compatibility\jenkinsfile --mirror http://ftp.halifax.rwth-aachen.de/jenkins -ns
+          .\jenkinsfile-runner-1.0-beta-30\bin\jenkinsfile-runner.bat -jv 2.346.2 -p D:\GH-Runner1\_work\bai_test_jfr_compatibility\bai_test_jfr_compatibility\plugins.txt -f D:\GH-Runner1\_work\bai_test_jfr_compatibility\bai_test_jfr_compatibility\jenkinsfile --mirror http://ftp.halifax.rwth-aachen.de/jenkins -ns
       
           
 #          cp /home/runner/work/Test2/Test2/"${{ github.event.inputs.RepoName }}"/properties.jenkins /home/runner/work/Test2/Test2
