@@ -46,7 +46,7 @@ case "`uname`" in
   CYGWIN*) cygwin=true ;;
   Darwin*) darwin=true
            if [ -z "$JAVA_VERSION" ] ; then
-             JAVA_VERSION="CurrentJDK"
+             JAVA_VERSION="openjdk@11"
            else
              echo "Using Java version: $JAVA_VERSION"
            fi
