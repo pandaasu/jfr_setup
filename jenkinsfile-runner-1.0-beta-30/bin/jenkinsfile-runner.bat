@@ -68,7 +68,7 @@ for %%i in ("%~dp0..") do set "BASEDIR=%%~fi"
 set REPO=
 
 
-if "%JAVACMD%"=="" set JAVACMD="%BASEDIR%"\Java\OpenJDK11U-jdk_x64_windows_hotspot_11.0.16_8\jdk-11.0.16+8\bin
+if "%JAVACMD%"=="" set JAVACMD=%BASEDIR%\Java\OpenJDK11U-jdk_x64_windows_hotspot_11.0.16_8\jdk-11.0.16+8\bin\java
 
 if "%REPO%"=="" set REPO=%BASEDIR%\repo
 
