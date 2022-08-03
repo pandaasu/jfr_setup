@@ -11,7 +11,7 @@ branch-api:latest
 build-timeout:latest
 caffeine-api:latest
 checks-api:latest
-cloudbees-folder:latest
+cloudbees-folder:6.729.v2b_9d1a_74d673
 command-launcher:latest
 config-file-provider:latest
 configuration-as-code:latest
@@ -49,7 +49,7 @@ gravatar:latest
 groovy:latest
 handlebars:latest
 icon-shim:latest
-instance-identity:latest
+instance-identity:113.vb926fdeb6c55
 jackson2-api:latest
 javadoc:latest
 javax-activation-api:latest
@@ -57,6 +57,7 @@ jaxb:latest
 jdk-tool:latest
 jersey2-api:latest
 jjwt-api:latest
+jakarta-mail-api:2.0.0-5
 jnr-posix-api:latest
 jquery-detached:latest
 jquery3-api:latest
@@ -68,12 +69,12 @@ lockable-resources:latest
 mailer:latest
 mapdb-api:latest
 matrix-auth:latest
-matrix-project:latest
+matrix-project:771.v574584b_39e60
 maven-plugin:latest
 mercurial:latest
 metrics:latest
 mina-sshd-api-common:latest
-mina-sshd-api-core:latest
+mina-sshd-api-core:2.8.0-18.vd98674ecd652
 momentjs:latest
 oauth-credentials:latest
 oic-auth:latest
