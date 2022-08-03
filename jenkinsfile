@@ -1,31 +1,10 @@
-#!groovy
-import groovy.json.JsonSlurper
-
-def ARTIFACT_ID = "rc-akeneo-product-inf"
-def NEXUS_USER = "pasupvar"
-def NEXUS_PASSWORD = "Varsha@123"
-def getRepoDetails(NEXUS_USER, NEXUS_PASSWORD){
-	
-	output = sh(returnStdout:true, script:'curl -i -X GET -u '+NEXUS_USER+':'+NEXUS_PASSWORD+' http://10.200.8.101:8081/service/rest/v1/components?repository=Mulesoft_DevOps_Release -H \"accept: application/json\"')
-	print("Response"+output)
-	return output
-}
-
 node {  
-     timestamps {
-    	  stage('Get_RepoDetails'){
-		
-				def props = readProperties file: '/application/actions-runner/JFRRunner/_work/JFR-test/JFR-test/properties.jenkins' 
-				def RepoName = props['repo.name']
-				echo "${RepoName}"
-				def output = getRepoDetails(NEXUS_USER, NEXUS_PASSWORD)
-		  	echo "${output}"
-				//echo "The Http code is "+output+" "
-				if(output == "200")
-				{
-				  print("got repository component details")
-				}else{
-					print("ERROR :"+output)
-				}
-        }
+    stage('Nexus-RepoDetails') { 
+        	      def Artifact_id = "cargo-tracker"
+		      def Group_id = "net.java"
+		      def Artifact_Package = "1.0-SNAPSHOT"
+	      	      def NEXUS_USER = "admin"
+		      def NEXUS_PASSWORD = "Elastic@12345"
+		      echo "The Http code is "+output+" "
+    }
 }
