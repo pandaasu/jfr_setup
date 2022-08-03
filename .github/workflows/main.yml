@@ -21,7 +21,7 @@ jobs:
           
 
           echo "==========Downloading plugins=========="
-          D:\GH-Runner1\JFR\jenkinsfile-runner-1.0-beta-30\bin\jenkinsfile-runner.bat -w D:\GH-Runner1\JFR\jenkins.war -p D:\GH-Runner1\JFR\plugins -f D:\GH-Runner1\_work\bai_test_jfr_compatibility\bai_test_jfr_compatibility\jenkinsfile -ns
+          D:\GH-Runner1\JFR\jenkinsfile-runner-1.0-beta-30\bin\jenkinsfile-runner.bat -w D:\GH-Runner1\JFR\jenkins.war -p D:\GH-Runner1\JFR\plugins\plugins -f D:\GH-Runner1\_work\bai_test_jfr_compatibility\bai_test_jfr_compatibility\jenkinsfile -ns
           
 
           
