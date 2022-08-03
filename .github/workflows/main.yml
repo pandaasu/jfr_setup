@@ -20,17 +20,8 @@ jobs:
           dir
           
 
-          
-          echo "==========setting up the jenkins url=========="
-          $env:Jenkins_Download_URL = 'https://get.jenkins.io/war-stable/2.346.2/jenkins.war'
-          echo "==========Downloading the WAR file=========="
-          curl -o jenkins.war $env:Jenkins_Download_URL 
-          echo "==========downloaded the war file=========="
-          dir
-          
-          
-          echo "==========downloaded plugins=========="
-          .\jenkinsfile-runner-1.0-beta-30\bin\jenkinsfile-runner.bat -w D:\GH-Runner1\_work\bai_test_jfr_compatibility\bai_test_jfr_compatibility\jenkins.war -p D:\GH-Runner1\_work\bai_test_jfr_compatibility\bai_test_jfr_compatibility\plugins.txt -f D:\GH-Runner1\_work\bai_test_jfr_compatibility\bai_test_jfr_compatibility\jenkinsfile --mirror http://ftp.halifax.rwth-aachen.de/jenkins -ns
+          echo "==========Downloading plugins=========="
+          D:\GH-Runner1\JFR\jenkinsfile-runner-1.0-beta-30\bin\jenkinsfile-runner.bat -w D:\GH-Runner1\JFR\jenkins.war -p D:\GH-Runner1\JFR\plugins -f D:\GH-Runner1\_work\bai_test_jfr_compatibility\bai_test_jfr_compatibility\jenkinsfile -ns
           
 
           
@@ -71,4 +62,13 @@ jobs:
 #           echo "==========unzipping the zip file=========="
 #           Expand-Archive .\jenkinsfile-runner-1.0-beta-30.zip
 #           echo "==========Unzipped the file=========="
+#           dir
+
+
+
+#           echo "==========setting up the jenkins url=========="
+#           $env:Jenkins_Download_URL = 'https://get.jenkins.io/war-stable/2.346.2/jenkins.war'
+#           echo "==========Downloading the WAR file=========="
+#           curl -o jenkins.war $env:Jenkins_Download_URL 
+#           echo "==========downloaded the war file=========="
 #           dir
