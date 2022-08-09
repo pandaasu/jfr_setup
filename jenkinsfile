@@ -1,10 +1,5 @@
 node {  
     stage('Nexus-RepoDetails') { 
-        	      def Artifact_id = "cargo-tracker"
-		      def Group_id = "net.java"
-		      def Artifact_Package = "1.0-SNAPSHOT"
-	      	      def NEXUS_USER = "admin"
-		      def NEXUS_PASSWORD = "Elastic@12345"
 		      echo "The Http code is "+output+" "
     }
 }
