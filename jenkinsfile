@@ -1,5 +1,5 @@
 node {  
     stage('Nexus-RepoDetails') { 
-		      echo "The Http code is "+output+" "
+		      echo "The Http code is null"
     }
 }
